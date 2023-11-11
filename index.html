@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Starbucks Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="logo.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu();"</div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="https://r.search.yahoo.com/_ylt=AwrKGGriKE9lwF0WfU7LQwx.;_ylu=Y29sbwNzZzMEcG9zAzIEdnRpZAMEc2VjA3Ny/RV=2/RE=1699715426/RO=10/RU=https%3a%2f%2fwww.starbucksathome.com%2fid%2fid-id%2fartikel%2ftentang-kami/RK=2/RS=qVIV9WNNX8ApdBruNU6tjmcCk5o-">About</a></li>
+                <li><a href="http://wa.me/085219392299">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2> It's not just Coffee<br>Its's <span>starbucks</span></h2>
+                <p>Starbucks coffee shops have become a beacon for coffee lovers, wherever they are.
+                    Why do so many people insist on going to Starbucks?
+                    Because they believe that Starbucks always provides sincere service, a warm atmosphere,
+                    and can serve a cup of coffee that has gone through a professional roasting and brewing process at any time.</p>
+                <a href="https://www.starbucks.com/">Learn More</a>
+            </div>        
+            <div class="imgBox">
+                <img src="img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="thumb1.png" onclick="imgSlider('img1.png');changeCircleColor('#017143')"></li>
+            <li><img src="thumb2.png" onclick="imgSlider('img2.png');changeCircleColor('#eb7495')"></li>
+            <li><img src="thumb3.png" onclick="imgSlider('img3.png');changeCircleColor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="https://www.facebook.com/StarbucksIndonesia?mibextid=ZbWKwL"><img src="facebook.png"></a></li>
+            <li><a href="https://instagram.com/starbucksindonesia?igshid=YTN0c3R5eDNlem83"><img src="instagram.png"></a></li>
+            <li><a href="https://x.com/SbuxIndonesia?t=uagOCn2Ks2upguUXXDkQZg&s=08"><img src="twitter.png"></a></li>
+        </ul>
+    </section>
+
+    <script>
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+
+</body>
+</html>
